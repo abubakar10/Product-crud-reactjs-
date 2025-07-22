@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SingleProduct from './single-product/SingleProduct';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, useSearchParams } from 'react-router-dom'; 
 import { useProductContext } from './../../Context/ProductsContext'; 
 import "./single-product/ProductStyle.css"
 import "./Productlist.css"
@@ -8,8 +8,17 @@ import "./Productlist.css"
 const Productlist = () => {
   const { products, setProducts } = useProductContext(); 
   const navigate = useNavigate(); 
+  const [searchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
+
+  // Handle URL parameters for brand filtering
+  useEffect(() => {
+    const brandParam = searchParams.get('brand');
+    if (brandParam) {
+      setSelectedBrand(brandParam);
+    }
+  }, [searchParams]);
 
   const handleDelete = (id) => {
     const updatedProducts = products.filter(product => product.id !== id);

@@ -11,10 +11,10 @@ const Footer = () => {
             <h3>ProductStore</h3>
             <p>Your trusted partner for premium products and exceptional shopping experience.</p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="LinkedIn">💼</a>
+              <a href="https://facebook.com/productstore" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+              <a href="https://twitter.com/productstore" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
+              <a href="https://instagram.com/productstore" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+              <a href="https://linkedin.com/company/productstore" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
             </div>
           </div>
           
@@ -31,11 +31,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Categories</h4>
             <ul>
-              <li><a href="#">Nike</a></li>
-              <li><a href="#">Adidas</a></li>
-              <li><a href="#">Puma</a></li>
-              <li><a href="#">Reebok</a></li>
-              <li><a href="#">Under Armour</a></li>
+              <li><Link to="/products?brand=Nike">Nike</Link></li>
+              <li><Link to="/products?brand=Adidas">Adidas</Link></li>
+              <li><Link to="/products?brand=Puma">Puma</Link></li>
+              <li><Link to="/products?brand=Reebok">Reebok</Link></li>
+              <li><Link to="/products?brand=Under%20Armour">Under Armour</Link></li>
             </ul>
           </div>
           
@@ -53,9 +53,9 @@ const Footer = () => {
           <div className="footer-bottom-content">
             <p>&copy; 2024 ProductStore. All rights reserved.</p>
             <div className="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Support</a>
+              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/terms">Terms of Service</Link>
+              <Link to="/support">Support</Link>
             </div>
           </div>
         </div>
