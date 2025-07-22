@@ -1,10 +1,10 @@
 .Container {
-    max-width: 600px;           
-    margin: 20px auto;         
-    padding: 20px;             
-    border: 1px solid #ccc;    
-    border-radius: 8px;        
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 800px;           
+    margin: 2rem auto;         
+    padding: 2rem;             
+    border: none;    
+    border-radius: 15px;        
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
     background-color: #ffffff; 
 }
 
@@ -39,13 +39,14 @@ select,
 textarea,
 input[type="url"] { 
     width: 100%;                
-    padding: 10px;            
-    margin-bottom: 15px;      
-    border: 1px solid #ccc;    
-    border-radius: 4px;       
+    padding: 0.8rem;            
+    margin-bottom: 1rem;      
+    border: 2px solid #e9ecef;    
+    border-radius: 8px;       
     box-sizing: border-box;   
-    transition: border-color 0.3s; 
-    font-size: 16px;           
+    transition: all 0.3s ease; 
+    font-size: 1rem;           
+    font-family: inherit;
 }
 
 input[type="text"]:focus,
@@ -54,7 +55,8 @@ select:focus,
 textarea:focus,
 input[type="url"]:focus { 
     border-color: #007BFF;     
-    outline: none;              
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);              
 }
 
 textarea {
@@ -63,19 +65,22 @@ textarea {
 }
 
 button {
-    padding: 10px 15px;       
+    padding: 0.8rem 1.5rem;       
     background-color: #007BFF;
     color: #fff;               
     border: none;              
-    border-radius: 4px;        
+    border-radius: 50px;        
     cursor: pointer;           
-    transition: background-color 0.3s; 
-    margin-top: 10px;       
-    font-size: 16px;         
+    transition: all 0.3s ease; 
+    margin-top: 0.5rem;       
+    font-size: 1rem;
+    font-weight: 600;         
 }
 
 button:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); 
 }
 
 div {
@@ -97,9 +102,74 @@ ul li {
     color: #333;            
 }
 .error-message {
-    color: red;               
-    font-weight: bold;       
-    margin-top: 10px;        
+    color: #dc3545;               
+    font-weight: 600;       
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;        
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .Container {
+        margin: 1rem;
+        padding: 1.5rem;
+        max-width: none;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea,
+    input[type="url"] {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea,
+    input[type="url"] {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    ul li {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 
