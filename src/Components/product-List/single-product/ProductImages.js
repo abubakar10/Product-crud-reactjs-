@@ -12,7 +12,7 @@ const ProductImages = ({ images }) => {
             <img
               className={`thumbnail ${selectedImage === image ? 'active' : ''}`}
               src={image}
-              alt={`Thumbnail ${index + 1}`}
+              alt={`Product view ${index + 1}`}
               onClick={() => setSelectedImage(image)}
             />
           </div>
@@ -21,7 +21,7 @@ const ProductImages = ({ images }) => {
 
       {/* Main Image */}
       <div className="image-gallery">
-        <img id="main-image" src={selectedImage} alt="Product Image" />
+        <img id="main-image" src={selectedImage} alt="Selected product" />
       </div>
     </div>
   );
